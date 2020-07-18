@@ -31,9 +31,11 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
+  It works the same way as a Route would which is match the current URL, but it's mostly useful for getting access to the match data and create not only dynamic URLs as in Route, but also change a specific parameter in the URL.
 1. How would you explain form validation to someone who has never programmed before?
+ It's a way to ensure that the users have correct input data on a specific field of the form and if not to inform them by printing a message so that they can input a valid data before it's submitted to the server.
 1. In 1-2 sentences, define end to end testing.
-
+  End to end testing is a way to speed up our work flow, prevent bugs and integrate systems. These tests help us to diagnose any problems in our code.
 ## Instructions
 
 ### Task 1: Project Set Up
