@@ -1,41 +1,47 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
-} from 'reactstrap';
+import styled from "styled-components"
+
+const WrapperDiv = styled.div`
+    width: 100%;
+    height: 100%;
+    background-color: lightgrey;
+    border: 2px solid red;
+
+      .nav{
+          width: 100%;
+          display: flex;
+          align-items: space-between;
+          justify-content: space-between;
+          justify-content: flex-end
+           
+        }
+        .navLinks{
+            color: blue;
+            padding: 10px;
+            margin: 0 20px;
+            text-decoration: none;
+            :hover{
+                background: cyan;
+            }
+        }
+    }
+    `;
 function Header() {
 
     return(
     <div className="header">
-         <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-    </Nav>
-    <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-info">Search</Button>
-    </Form>
-  </Navbar>
-         <ul>
-             <li>
-        <NavLink to="/"> Home</NavLink>
-            </li>
-            <li>
-        <NavLink to="/Pizza"> Order</NavLink>
-            </li>
-        </ul>
+
+    <WrapperDiv>
+        <div className="navbar">
+         <nav className="nav">
+        <Link className="navLinks" to="/"> Home</Link>
+
+        <Link className="navLinks" to="/pizzaorder"> Order</Link>
+
+        </nav>
+        </div>
+     </WrapperDiv>
     </div>
     )
 

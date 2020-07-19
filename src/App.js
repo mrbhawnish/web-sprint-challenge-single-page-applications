@@ -1,18 +1,18 @@
 import React from "react";
 import { Route, Switch, Link } from "react-router-dom";
-import Form from "./components/Form.js"
-import Header from "./components/Header.js"
-import { Container } from 'reactstrap';
+import Form from "./components/Form.js";
+import Header from "./components/Header.js";
+import HomePage from "./components/HomePage.js";
 const App = () => {
   return (
   
     <div>
-       <Container>
+
+     <Header/>
       <Switch>
-      <Route path="/pizza"><Form /></Route>
-      <Route path="/" ><Header/></Route>
+      <Route path="/pizzaorder"><Form /></Route>
+      <Route exact path="/" ><HomePage/></Route>
       </Switch>
-      </Container>
     </div>
   );
 };
